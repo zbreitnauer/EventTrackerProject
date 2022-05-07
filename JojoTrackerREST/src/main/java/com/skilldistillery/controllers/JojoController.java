@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,6 +48,22 @@ public class JojoController {
 			res.setStatus(201);
 		}
 		return joestar;
+
+	}
+	
+	@PutMapping("jojo/{id}")
+	public Jojo updatejojo(@PathVariable int id, @RequestBody Jojo jojo, HttpServletResponse res) {
+		try {
+			jojo = ser.updateJojo(id, jojo);
+			if (jojo == null) {
+				res.setStatus(404);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			res.setStatus(400);
+			jojo = null;
+		}
+		return jojo;
 
 	}
 }

@@ -8,12 +8,13 @@ import org.springframework.stereotype.Service;
 
 import com.skilldistillery.entities.Jojo;
 import com.skilldistillery.repositories.JojoRepository;
+
 @Service
 public class JojoServiceImpl implements JojoService {
 
 	@Autowired
 	JojoRepository repo;
-	
+
 	@Override
 	public List<Jojo> index() {
 		// TODO Auto-generated method stub
@@ -24,7 +25,7 @@ public class JojoServiceImpl implements JojoService {
 	public Jojo getJojoById(int id) {
 		Optional<Jojo> jo = repo.findById(id);
 		Jojo jojo = null;
-		if(jo.isPresent()) {
+		if (jo.isPresent()) {
 			jojo = jo.get();
 		}
 		return jojo;
@@ -34,12 +35,23 @@ public class JojoServiceImpl implements JojoService {
 	public Jojo createJojo(Jojo jojo) {
 		return repo.save(jojo);
 	}
-	
 
-	
-
-	
-	
-	
+	@Override
+	public Jojo updateJojo(int id, Jojo jojo) {
+		Optional<Jojo> jo = repo.findById(id);
+		Jojo jostar = null;
+		if (jo.isPresent()) {
+			jostar = jo.get();
+			jostar.setFirstname(jojo.getFirstname());
+			jostar.setLastname(jojo.getLastname());
+			jostar.setAge(jojo.getAge());
+			jostar.setHeight(jojo.getHeight());
+			jostar.setWeight(jojo.getWeight());
+			jostar.setStand(jojo.getStand());
+			jostar.setImage(jojo.getImage());
+			repo.saveAndFlush(jostar);
+		}
+		return jostar;
+	}
 
 }

@@ -12,5 +12,7 @@ public interface JojoService {
 	
 	Jojo createJojo(Jojo jojo);
 	
+	Jojo updateJojo(int id , Jojo jojo);
+	
 	
 }
