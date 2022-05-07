@@ -8,5 +8,7 @@ public interface JojoService {
 	
 	List<Jojo> index();
 	
+	Jojo getJojoById(int id);
+	
 	
 }

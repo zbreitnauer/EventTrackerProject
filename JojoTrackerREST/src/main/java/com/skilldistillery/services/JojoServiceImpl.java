@@ -20,6 +20,16 @@ public class JojoServiceImpl implements JojoService {
 		return repo.findAll();
 	}
 
+	@Override
+	public Jojo getJojoById(int id) {
+		Optional<Jojo> jo = repo.findById(id);
+		Jojo jojo = null;
+		if(jo.isPresent()) {
+			jojo = jo.get();
+		}
+		return jojo;
+	}
+
 	
 
 	

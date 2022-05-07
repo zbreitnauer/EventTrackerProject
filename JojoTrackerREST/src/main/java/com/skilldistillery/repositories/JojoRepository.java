@@ -8,6 +8,6 @@ import com.skilldistillery.entities.Jojo;
 
 public interface JojoRepository extends JpaRepository <Jojo, Integer>{
 	
-	
+	List<Jojo> findByFirstnameLike(String keyword);
 
 }
