@@ -14,5 +14,7 @@ public interface JojoService {
 	
 	Jojo updateJojo(int id , Jojo jojo);
 	
+	boolean deleteJojo(int id);
+	
 	
 }

@@ -54,4 +54,13 @@ public class JojoServiceImpl implements JojoService {
 		return jostar;
 	}
 
+	@Override
+	public boolean deleteJojo(int id) {
+		boolean deleted = false;
+		if(repo.existsById(id)) {
+			repo.deleteById(id);
+			deleted = true;
+		}
+		return deleted;	}
+
 }
