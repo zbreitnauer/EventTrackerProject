@@ -30,6 +30,12 @@ public class JojoServiceImpl implements JojoService {
 		return jojo;
 	}
 
+	@Override
+	public Jojo createJojo(Jojo jojo) {
+		return repo.save(jojo);
+	}
+	
+
 	
 
 	
