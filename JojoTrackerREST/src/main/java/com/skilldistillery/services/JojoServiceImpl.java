@@ -63,4 +63,10 @@ public class JojoServiceImpl implements JojoService {
 		}
 		return deleted;	}
 
+	@Override
+	public List<Jojo> findJojoByKeyword(String keyword) {
+		keyword = "%" + keyword + "%";
+		return repo.findByFirstnameLike(keyword);
+	}
+
 }

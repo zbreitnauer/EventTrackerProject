@@ -81,4 +81,9 @@ public class JojoController {
 			res.setStatus(400);
 		}
 	}
+	
+	@GetMapping("jojo/search/{keyword}")
+	public List<Jojo> searchAnimeBykeyword(@PathVariable String keyword, HttpServletResponse res ){	
+		return ser.findJojoByKeyword(keyword);
+	}
 }

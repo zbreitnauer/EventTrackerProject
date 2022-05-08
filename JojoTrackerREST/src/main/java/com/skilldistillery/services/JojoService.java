@@ -16,5 +16,7 @@ public interface JojoService {
 	
 	boolean deleteJojo(int id);
 	
+	List<Jojo> findJojoByKeyword(String keyword);
+	
 	
 }
