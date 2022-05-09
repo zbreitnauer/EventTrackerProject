@@ -83,7 +83,7 @@ public class JojoController {
 	}
 	
 	@GetMapping("jojo/search/{keyword}")
-	public List<Jojo> searchAnimeBykeyword(@PathVariable String keyword, HttpServletResponse res ){	
+	public List<Jojo> searchJojoBykeyword(@PathVariable String keyword, HttpServletResponse res ){	
 		return ser.findJojoByKeyword(keyword);
 	}
 }
