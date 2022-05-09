@@ -9,7 +9,20 @@ This is a Jojo Bizarre Adventure web application. As of right now this applicati
 | :------------- | :------------- | :-------------
 | List<Joestar>       | GET api/jojo       | Gets all characters
 | Joestar      | GET api/jojo/{id}       | Gets character by id
-| Joestar      | GET api/jojo/search/{firstName}       | Gets character by their first first name
+| Joestar      | GET api/jojo/search/{firstName}       | Gets character by their first  name
 | Joestar      | POST api/jojo       | Creates character
 | Joestar      | PUT api/jojo/{id}       | Updates character by id
 | void      | DELETE api/jojo/{id}       | Deletes character by id
+
+# Technologies
+
+* Spring Tool Suite 4
+* MYSQL WorkBench
+* Postman
+* Atom
+* Terminal
+* MAMP
+
+# Lessons
+
+Lessons learned on this one would be using REST for my HTTP and Spring Data JPA for my CRUD operations. Using Postman to test my HTTP methods work. Also using JUNIT to test that MYSQL is communicating with Spring Boot and making sure what I request is what I get.
