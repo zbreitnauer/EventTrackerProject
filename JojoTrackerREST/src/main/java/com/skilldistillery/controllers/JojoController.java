@@ -53,7 +53,7 @@ public class JojoController {
 	}
 	
 	@PutMapping("jojo/{id}")
-	public Jojo updatejojo(@PathVariable int id, @RequestBody Jojo jojo, HttpServletResponse res) {
+	public Jojo updateJojo(@PathVariable int id, @RequestBody Jojo jojo, HttpServletResponse res) {
 		try {
 			jojo = ser.updateJojo(id, jojo);
 			if (jojo == null) {
