@@ -29,4 +29,4 @@ Application was updated using javascript and XMLhttpRequests. The Jojo app now h
 * XMLhttpRequests
 # Lessons
 
-Lessons learned on this one would be using REST for my HTTP and Spring Data JPA for my CRUD operations. Using Postman to test my HTTP methods work. Also using JUNIT to test that MYSQL is communicating with Spring Boot and making sure what I request is what I get.
+Lessons learned on this one would be using REST for my HTTP and Spring Data JPA for my CRUD operations. Using Postman to test my HTTP methods work. Also using JUNIT to test that MYSQL is communicating with Spring Boot and making sure what I request is what I get. (5-13-22) Lessons learned on this one is Javascript and XMLhttpRequests. I definitely need to go over javascript and XMLhttpRequests again. Really struggled on this one.
