@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jojo App</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body style ="background-color:HotPink">
+  <h1>JoJo's Bizarre Adventure</h1>
+
+
+<h2>Search by id</h2>
+<form name="findJojo">
+<input type="number" name="jojoId">
+<button name="lookup">Search</button>
+</form>
+
+<div id="output">
+    <div id="jojoData"></div>
+  </div>
+
+
+<h2>Create Jojo</h2>
+ <form name="createJojoForm">
+
+   First Name:<input type="text" name="firstname">
+   <br>
+    Last Name:<input type="text" name="lastname">
+    <br>
+    Age:<input type="number" name="age">
+    <br>
+    Weight:<input type="text" name="height">
+    <br>
+    Height:<input type="text" name="weight">
+    <br>
+    Stand/Power:<input type="text" name="stand">
+    <br>
+    Image:<input type="text" name="image">
+    <button name="createJojo">Submit</button>
+  </form>
+
+<h2>Update Jojo</h2>
+<form name="updateJojoForm">
+ 	ID:<input type="text" name="updateId">
+ 	<br>
+    First Name:<input type="text" name="firstname">
+ 	<br>
+    Last Name:<input type="text" name="lastname">
+ 	<br>
+    Age:<input type="number" name="age">
+ 	<br>
+    Weight:<input type="text" name="weight">
+ 	<br>
+    Height:<input type="text" name="height">
+ 	<br>
+    Stand/Power:<input type="text" name="stand">
+ 	<br>
+    Image:<input type="text" name="image">
+    <button name="updateJojo">Submit</button>
+  </form>
+  
+<h2>Delete Jojo</h2>
+<form name="deleteJojo">
+<input type="number" name="deleteId">
+<button name="lookup">Delete</button>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/eventFunction.js"></script>
+</body>
+</html>

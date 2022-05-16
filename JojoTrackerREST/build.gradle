@@ -4,6 +4,15 @@ plugins {
 	id 'java'
 }
 
+apply plugin: 'war'
+war {
+  enabled = true
+  // Gradle will replace the variable baseName
+  // with our app name, as defined in settings.gradle
+  archiveFileName = "${archivesBaseName}.war"
+  destinationDirectory = file("../")     // Project workspace directory
+}
+
 group = 'com.skilldistillery'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
@@ -22,6 +31,7 @@ implementation project(':JojoTrackerJPA')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation("org.junit.jupiter:junit-jupiter:$junit5Version")
     testImplementation 'junit:junit:4.12'
+    implementation ('org.springframework.boot:spring-boot-starter-tomcat')
 }
 
 tasks.named('test') {
